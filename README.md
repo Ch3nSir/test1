@@ -29,6 +29,25 @@ scripts/
 └── train.py             # CLI to launch distillation
 ```
 
+## Installation
+
+Install the runtime dependencies inside a virtual environment.  The
+[`requirements.txt`](requirements.txt) file lists the libraries that power the
+compressor/decoder stack and the training loop:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+> **Note**
+> The project relies on PyTorch with CUDA support for practical training
+> throughput.  Visit the [official installation guide](https://pytorch.org/) to
+> pick the appropriate command for your operating system and GPU drivers before
+> running `pip install -r requirements.txt`.
+
 ## Usage
 
 1. **Create a dataset** in JSON Lines format where every row contains a
